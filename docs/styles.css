@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0); /* Agrega sombra al texto */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(8,7,106,1) 16%, rgba(9,9,121,1) 35%, rgba(6,75,164,1) 56%, rgba(6,75,164,1) 69%, rgba(6,75,164,1) 81%, rgba(8,7,106,1) 100%);
+    background-repeat: no-repeat; /* Evita que el degradado se repita */
+    background-size: 100% 100%; /* Ajusta el tamaño del degradado al 100% del cuerpo */
+}
+
+
+.container{        
+    position: absolute;    
+    width: 100%;    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;    
+}
+
+/* Estilos adicionales para el cuerpo */
+/* Puedes ajustar estos estilos según tus preferencias */
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+}
+
+p {
+    font-size: 24px;
+    color: #fff;
+}
+
+
+
+/* Estilos adicionales para los picos de las estrellas */
+.additional-stars .star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: #ffffffab;
+    border-radius: 50%;
+    pointer-events: none; /* Para que no interfiera con el contenido */
+}
+
+.additional-stars .star .spike {
+    position: absolute;
+    width: 1px;
+    height: 10px;
+    background: #ffffff93;
+    transform: rotate(144deg); /* Rotar cada pico en 144 grados */
+}
+
+.additional-stars .star .spike:nth-child(1) {
+    transform: rotate(0deg); /* Rotación del primer pico */
+}
+
+.additional-stars .star .spike:nth-child(2) {
+    transform: rotate(72deg); /* Rotación del segundo pico */
+}
+
+.additional-stars .star .spike:nth-child(3) {
+    transform: rotate(144deg); /* Rotación del tercer pico */
+}
+
+.additional-stars .star .spike:nth-child(4) {
+    transform: rotate(216deg); /* Rotación del cuarto pico */
+}
+
+.additional-stars .star .spike:nth-child(5) {
+    transform: rotate(288deg); /* Rotación del quinto pico */
+}
+
+
+
+/* Estilos para el marco */
+.frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Estilos para las estrellas adicionales */
+.additional-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%; /* Ajusta según el desplazamiento deseado */
+    height: 300%; /* Ajusta según el desplazamiento deseado */
+    z-index: 1;
+    background: transparent url('stars.png') repeat top center;
+    animation: animateStars 50s linear infinite;
+}
+
+/* Animación */
+@keyframes animateStars {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
